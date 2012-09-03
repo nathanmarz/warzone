@@ -66,7 +66,7 @@ public class WResource {
 		}
 		
 		
-		String fileImage = "Resources/" + fileImage2;
+		String fileImage = "Resources" + File.separator + fileImage2;
 		unitModels.put(name.toLowerCase(), model);
 		File file = new File(fileImage);
 		BufferedImage image = null;
