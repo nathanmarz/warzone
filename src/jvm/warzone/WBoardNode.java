@@ -41,10 +41,11 @@ public class WBoardNode extends JComponent {
 			
 			public void mousePressed(MouseEvent e) {
 				int b;
-				
-				if(e.getButton()==MouseEvent.BUTTON1) b = 1;
-				else
-					b = 2;
+				if(e.getButton()!=MouseEvent.BUTTON1 || e.isControlDown()) {
+                                    b = 2;                                    
+                                } else {
+                                    b = 1;
+                                }
 				viewer.SpaceClicked(row, col,b);
 			}
 			
